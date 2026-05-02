@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Song Syncer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #7c6af7;
+      --text: #e8e8f0;
+      --muted: #6b6b80;
+      --card: #13131c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(124,106,247,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,106,247,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .page-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 8rem 2rem 6rem;
+    }
+
+    .page-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc-body h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 2.5rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .doc-body h2:first-child { margin-top: 0; }
+
+    .doc-body p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .doc-body ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .doc-body li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .doc-body strong { color: var(--text); font-weight: 600; }
+
+    .doc-body a { color: var(--accent); text-decoration: none; }
+    .doc-body a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box p { margin: 0; font-size: 0.9rem; }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-left {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">// SONG SYNCER</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="tos.html">Terms</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+    <p class="page-eyebrow">// Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="meta">Effective Date: May 2, 2026 &nbsp;·&nbsp; RSA Solutions</p>
+
+    <div class="doc-body">
+
+      <h2>1. Agreement</h2>
+      <p>
+        These Terms of Service ("Terms") govern your access to and use of Song Syncer, a Discord bot developed and operated by <strong>RSA Solutions</strong> ("we," "us," or "our"). By using Song Syncer, you agree to be bound by these Terms.
+      </p>
+      <div class="highlight-box">
+        <p>Song Syncer is a personal-use utility currently available on an invite-only basis. Access is granted at RSA Solutions' sole discretion.</p>
+      </div>
+
+      <h2>2. Description of Service</h2>
+      <p>
+        Song Syncer is a Discord bot that monitors designated text channels for Spotify and YouTube music links and automatically adds the corresponding tracks to configured Spotify and YouTube playlists. The bot operates on behalf of authorized users within approved Discord servers.
+      </p>
+
+      <h2>3. Eligibility &amp; Access</h2>
+      <p>
+        Song Syncer is currently available on an invite-only basis. Access may be expanded in the future. To use Song Syncer, you must:
+      </p>
+      <ul>
+        <li>Have a valid Discord account in good standing.</li>
+        <li>Have a valid Spotify and/or YouTube account where applicable.</li>
+        <li>Be authorized to access the Discord server where Song Syncer is deployed.</li>
+        <li>Be 13 years of age or older (or the minimum age required by Discord's Terms of Service in your jurisdiction).</li>
+      </ul>
+
+      <h2>4. User Conduct</h2>
+      <p>By using Song Syncer, you agree not to:</p>
+      <ul>
+        <li>Use the bot to add content that violates the Terms of Service of Discord, Spotify, or YouTube.</li>
+        <li>Attempt to reverse engineer, modify, or interfere with the bot's operation.</li>
+        <li>Use the bot in any way that could damage, disable, or impair the service or its underlying infrastructure.</li>
+        <li>Attempt to circumvent any access controls or rate limits imposed by the bot or the underlying APIs.</li>
+        <li>Share access credentials or tokens associated with Song Syncer with unauthorized parties.</li>
+      </ul>
+
+      <h2>5. Third-Party Platforms</h2>
+      <p>
+        Song Syncer depends on and interacts with Discord, Spotify, and Google/YouTube APIs. Your use of these platforms is subject to their respective Terms of Service:
+      </p>
+      <ul>
+        <li><a href="https://discord.com/terms" target="_blank">Discord Terms of Service</a></li>
+        <li><a href="https://www.spotify.com/legal/end-user-agreement/" target="_blank">Spotify Terms of Use</a></li>
+        <li><a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a></li>
+        <li><a href="https://policies.google.com/terms" target="_blank">Google Terms of Service</a></li>
+      </ul>
+      <p>
+        RSA Solutions is not responsible for any changes to these third-party platforms that may affect Song Syncer's functionality or your access to them.
+      </p>
+
+      <h2>6. OAuth Authorization</h2>
+      <p>
+        Song Syncer requires OAuth authorization to your Spotify and/or YouTube accounts in order to manage playlists on your behalf. By authorizing Song Syncer, you grant RSA Solutions permission to access and modify your designated playlists through the respective platform APIs.
+      </p>
+      <p>
+        You may revoke this authorization at any time through your Spotify or Google account settings. Revoking authorization will prevent Song Syncer from syncing tracks to your playlists.
+      </p>
+
+      <h2>7. Availability &amp; Uptime</h2>
+      <p>
+        Song Syncer is provided as-is, on a best-effort basis. We make no guarantees regarding uptime, availability, or uninterrupted service. The bot may be taken offline for maintenance, updates, or any other reason without prior notice.
+      </p>
+
+      <h2>8. Disclaimer of Warranties</h2>
+      <p>
+        Song Syncer is provided "as is" and "as available" without warranties of any kind, either express or implied. RSA Solutions does not warrant that the service will be error-free, uninterrupted, or free of bugs or defects.
+      </p>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by applicable law, RSA Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of Song Syncer, including but not limited to loss of data, playlist content, or access to third-party services.
+      </p>
+
+      <h2>10. Termination</h2>
+      <p>
+        RSA Solutions reserves the right to suspend or terminate your access to Song Syncer at any time, for any reason, with or without notice. You may also stop using Song Syncer at any time by revoking the bot's OAuth access through your connected platform accounts.
+      </p>
+
+      <h2>11. Changes to These Terms</h2>
+      <p>
+        We may revise these Terms from time to time. The effective date at the top of this page will reflect the most recent revision. Continued use of Song Syncer after changes are posted constitutes your acceptance of the updated Terms.
+      </p>
+
+      <h2>12. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with the laws of the Commonwealth of Virginia, United States, without regard to its conflict of law provisions.
+      </p>
+
+      <h2>13. Contact</h2>
+      <p>
+        For questions or concerns about these Terms, contact RSA Solutions at:
+        <br /><strong>songsyncer.rsasolutions.org</strong>
+      </p>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 RSA Solutions. All rights reserved.</div>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="tos.html">Terms of Service</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

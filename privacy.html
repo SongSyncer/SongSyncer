@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Song Syncer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #7c6af7;
+      --text: #e8e8f0;
+      --muted: #6b6b80;
+      --card: #13131c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(124,106,247,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,106,247,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .page-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 8rem 2rem 6rem;
+    }
+
+    .page-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc-body h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 2.5rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .doc-body h2:first-child { margin-top: 0; }
+
+    .doc-body p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .doc-body ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .doc-body li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .doc-body strong { color: var(--text); font-weight: 600; }
+
+    .doc-body a { color: var(--accent); text-decoration: none; }
+    .doc-body a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-left {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">// SONG SYNCER</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="tos.html">Terms</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+    <p class="page-eyebrow">// Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective Date: May 2, 2026 &nbsp;·&nbsp; RSA Solutions</p>
+
+    <div class="doc-body">
+
+      <h2>1. Overview</h2>
+      <p>
+        Song Syncer is a Discord bot developed and operated by <strong>RSA Solutions</strong>. This Privacy Policy describes what data Song Syncer collects, how it is used, and your rights with respect to that data.
+      </p>
+      <div class="highlight-box">
+        <p>Song Syncer is a personal and small-group utility. We do not sell, rent, or share your data with third parties for marketing or advertising purposes. Ever.</p>
+      </div>
+
+      <h2>2. Data We Collect</h2>
+      <p>Song Syncer collects and processes the following data in order to function:</p>
+      <ul>
+        <li><strong>Discord User Information:</strong> Your Discord username and user ID (used to attribute which user shared a link and to enforce undo permissions).</li>
+        <li><strong>Discord Server &amp; Channel Information:</strong> The server ID and channel ID where Song Syncer is configured to operate.</li>
+        <li><strong>Music Links:</strong> Spotify track URLs and YouTube video URLs that are shared in monitored channels.</li>
+        <li><strong>Spotify Account &amp; Playlist Information:</strong> OAuth credentials (stored as refresh/access tokens), your Spotify user ID, and the playlist ID configured for sync.</li>
+        <li><strong>YouTube Account &amp; Playlist Information:</strong> OAuth credentials (stored as refresh/access tokens) and the YouTube playlist ID configured for sync.</li>
+        <li><strong>Activity Logs:</strong> A log of sync events including track name, source platform, outcome (added/duplicate/failed), and timestamp.</li>
+      </ul>
+
+      <h2>3. How We Use Your Data</h2>
+      <p>All data collected is used exclusively for the operation of Song Syncer:</p>
+      <ul>
+        <li>Authenticating with Spotify and YouTube APIs on your behalf to add tracks to your playlists.</li>
+        <li>Detecting and attributing shared music links in configured Discord channels.</li>
+        <li>Preventing duplicate playlist entries.</li>
+        <li>Enabling the undo feature to remove previously added tracks.</li>
+        <li>Generating activity logs visible to authorized users.</li>
+      </ul>
+      <p>We do not use your data for analytics, advertising, profiling, or any purpose beyond the core functionality described above.</p>
+
+      <h2>4. Data Storage &amp; Security</h2>
+      <p>
+        Song Syncer is self-hosted software. Data including OAuth tokens, server/channel configuration, and activity logs are stored locally on the host machine running the bot. This data is not transmitted to any RSA Solutions-operated remote servers.
+      </p>
+      <p>
+        OAuth tokens for Spotify and YouTube are stored on the host machine and used solely to authenticate API requests. These tokens are never shared with third parties outside of the respective platform APIs (Spotify, Google/YouTube).
+      </p>
+
+      <h2>5. Third-Party Services</h2>
+      <p>Song Syncer interacts with the following third-party platforms on your behalf:</p>
+      <ul>
+        <li><strong>Discord</strong> — for reading messages in configured channels. Governed by <a href="https://discord.com/privacy" target="_blank">Discord's Privacy Policy</a>.</li>
+        <li><strong>Spotify</strong> — for adding tracks to playlists. Governed by <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank">Spotify's Privacy Policy</a>.</li>
+        <li><strong>Google / YouTube</strong> — for adding videos to playlists via the YouTube Data API. Governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. Song Syncer's use of YouTube API Services is also subject to the <a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a>.</li>
+      </ul>
+
+      <h2>6. Google API Disclosure</h2>
+      <p>
+        Song Syncer uses the YouTube Data API to add videos to YouTube playlists. Our use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.
+      </p>
+      <p>Specifically:</p>
+      <ul>
+        <li>We only request the <code>youtube</code> scope necessary to write to your YouTube playlist.</li>
+        <li>YouTube account data is used solely to add music links to your designated playlist.</li>
+        <li>We do not use YouTube account data for any purpose beyond playlist management.</li>
+        <li>We do not share YouTube account data with any third parties.</li>
+      </ul>
+
+      <h2>7. Data Retention</h2>
+      <p>
+        Song Syncer retains activity logs and configuration data for as long as the bot is operational. OAuth tokens are retained until manually revoked or until the bot is uninstalled. There is no automated data expiration.
+      </p>
+      <p>
+        You may revoke Song Syncer's access to your Spotify account at any time via <a href="https://www.spotify.com/account/apps/" target="_blank">Spotify's connected apps page</a>. You may revoke access to your Google/YouTube account at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google's security settings</a>.
+      </p>
+
+      <h2>8. Access &amp; Availability</h2>
+      <p>
+        Song Syncer is currently operational on an invite-only basis for a private group. Public availability is not yet offered. Access may be expanded in the future at RSA Solutions' discretion.
+      </p>
+
+      <h2>9. Children's Privacy</h2>
+      <p>
+        Song Syncer is not directed at children under the age of 13. We do not knowingly collect data from children. If you believe a child has provided data through Song Syncer, please contact us so we can take appropriate action.
+      </p>
+
+      <h2>10. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. The effective date at the top of this page will reflect the date of the most recent revision. Continued use of Song Syncer after changes are posted constitutes acceptance of the updated policy.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        For questions or concerns about this Privacy Policy or Song Syncer's data practices, contact RSA Solutions at:
+        <br /><strong>songsyncer.rsasolutions.org</strong>
+      </p>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 RSA Solutions. All rights reserved.</div>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="tos.html">Terms of Service</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
